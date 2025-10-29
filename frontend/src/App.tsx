@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import { Task, type TaskProps } from "./components/task";
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="p-4">
+        <h1 className="text-center text-4xl">TODO</h1>
+        <div className="flex flex-col gap-2 p-4 items-center">
+          {tasks.map((task) => (
+            <Task title={task.title} description={task.description} key={task.title} />
+          ))}
+        </div>
       </div>
-      <h1 className="text-3xl">Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
+
+//mocks
+const tasks: TaskProps[] = [
+  {
+    title: "Task",
+    description:
+      "Создать простое одностраничное приложение (SPA) для управления задачами — добавление, отображение, изменение статуса и удаление.",
+    status: "in-progress",
+  },
+  {
+    title: "Taskasdasd 2",
+    description: "Использовать React для построения пользовательского интерфейса и управления состоянием приложения.",
+    status: "pending",
+  },
+];
