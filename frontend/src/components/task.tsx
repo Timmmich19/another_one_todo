@@ -5,7 +5,7 @@ import { TrashIcon } from "../assets/trash";
 
 export interface TaskProps {
   title: string;
-  description: string;
+  description?: string;
   status: Status;
 }
 
