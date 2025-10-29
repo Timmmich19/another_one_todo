@@ -7,5 +7,5 @@
 }
 
 #root {
-  @apply h-screen;
+  @apply h-full overflow-hidden;
 }

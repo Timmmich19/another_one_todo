@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import type { Task, TaskCreate, TaskUpdate } from '../types';
+import type {TaskType, TaskCreate, TaskUpdate } from '../types';
 import { apiClient } from '../utils/api';
 
 export const useTasks = () => {
-  const [tasks, setTasks] = useState<Task[]>([]);
+  const [tasks, setTasks] = useState<TaskType[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
