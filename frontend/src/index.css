@@ -3,5 +3,9 @@
 
 :root {
   font-family: "Fira Code", sans-serif;
-  @apply bg-[#212121] text-white;
+  @apply bg-[#212121] text-white h-full;
+}
+
+#root {
+  @apply h-screen;
 }
