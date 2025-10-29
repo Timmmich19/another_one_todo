@@ -6,7 +6,7 @@ function App() {
         <h1 className="text-center text-4xl">TODO</h1>
         <div className="flex flex-col gap-2 p-4 items-center">
           {tasks.map((task) => (
-            <Task title={task.title} description={task.description} key={task.title} />
+            <Task title={task.title} description={task.description} status={task.status} key={task.title} />
           ))}
         </div>
       </div>
@@ -26,7 +26,8 @@ const tasks: TaskProps[] = [
   },
   {
     title: "Taskasdasd 2",
-    description: "Использовать React для построения пользовательского интерфейса и управления состоянием приложения.",
+    description:
+      "Использовать React для построения пользовательского интерфейса и управления состоянием приложения. Использовать React для построения пользовательского интерфейса и управления состоянием приложения. Использовать React для построения пользовательского интерфейса и управления состоянием приложения.",
     status: "pending",
   },
 ];
